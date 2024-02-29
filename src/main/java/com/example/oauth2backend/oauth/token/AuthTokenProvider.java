@@ -24,11 +24,11 @@ public class AuthTokenProvider {
         this.key = Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    private AuthToken createAuthToken(final String id, final Date expiry) {
+    public AuthToken createAuthToken(final String id, final Date expiry) {
         return new AuthToken(id, expiry, key);
     }
 
-    private AuthToken createAuthToken(final String id, final String role, final Date expiry) {
+    public AuthToken createAuthToken(final String id, final String role, final Date expiry) {
         return new AuthToken(id, role, expiry, key);
     }
 

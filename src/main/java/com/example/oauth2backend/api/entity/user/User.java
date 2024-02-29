@@ -81,7 +81,7 @@ public class User {
     @NotNull
     private LocalDateTime modifiedAt;
 
-    private User(
+    public User(
             @NotNull @Size(max = 64) final String userId,
             @NotNull @Size(max = 100) final String username,
             @NotNull @Size(max = 512) final String email,
