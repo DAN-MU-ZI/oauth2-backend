@@ -15,7 +15,6 @@ import com.example.oauth2backend.oauth.token.AuthToken;
 import com.example.oauth2backend.oauth.token.AuthTokenProvider;
 import com.example.oauth2backend.utils.CookieUtil;
 import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -44,7 +43,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     @Override
     public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response,
                                         final FilterChain chain,
-                                        final Authentication authentication) throws IOException, ServletException {
+                                        final Authentication authentication) throws IOException {
         String targetUrl = determineTargetUrl(request, response, authentication);
 
         if (response.isCommitted()) {
