@@ -41,6 +41,12 @@ spring:
           scope:
             - email
             - profile
+        github:
+          clientId:
+          clientSecret:
+          scope:
+            - read:user
+            - user:email
         kakao:
           clientId:
           clientSecret:
@@ -54,7 +60,6 @@ spring:
           clientName: Kakao
           client-authentication-method: client_secret_post
 
-      
       # Provider 설정
       provider:
         kakao:
