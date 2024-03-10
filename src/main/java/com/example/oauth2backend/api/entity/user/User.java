@@ -58,9 +58,9 @@ public class User {
     @Size(min = 1, max = 1)
     private String emailVerifiedYn;
 
-    @Column(name = "PROFILE_IMAGE_URL", length = 512)
+    @Column(name = "PROFILE_IMAGE_URL", length = 2048)
     @NotNull
-    @Size(max = 512)
+    @Size(max = 2048)
     private String profileImageUrl;
 
     @Column(name = "PROVIDER_TYPE", length = 20)
@@ -86,7 +86,7 @@ public class User {
             @NotNull @Size(max = 100) final String username,
             @NotNull @Size(max = 512) final String email,
             @NotNull @Size(max = 1) final String emailVerifiedYn,
-            @NotNull @Size(max = 512) final String profileImageUrl,
+            @NotNull @Size(max = 2048) final String profileImageUrl,
             final ProviderType providerType,
             final RoleType roleType,
             final LocalDateTime createdAt,
